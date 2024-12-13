@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div>
+
+        <h1 id="welcome"> Welcome my friends!</h1>
+    </div>
+
+    <div id="login">
+        <input type="text" id="username" placeholder="email or number" />
+        <br />
+        <input type="password" id="password" placeholder="password" />
+        <br />
+        <button type="button" id="login_button">
+            Enter
+        </button>
+        <button type="button" id="forgot_password_button">Forgot password? </button>
+        <button type="button" id="create_account_button"> Create account?</button>
+    </div>
+
+
+    <div id="my_modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Find account?</h2>
+            <label id="no_user"> </label>
+            <input type="text" placeholder="Enter your phone number or gmail" id="find_account_input" />
+            <button type="button" id="find_button"> Search </button>
+        </div>
+    </div>
+
+
+    <div id="my_second_modal" class="modal">
+        <div class="modal-content-edit">
+            <span class="close">&times;</span>
+            <h2> Authentication</h2>
+            
+            <label id="answers"> </label>
+            <br />
+            <label id="question_1"> </label>
+            <br />
+            <input type="text" id="get_answer_1" placeholder="Question 1" />
+            <br />
+            <label id="question_2"> </label>
+            <br />
+            <input type="text" id="get_answer_2" placeholder="Question 2" />
+            <br />
+            <label id="question_3"> </label>
+            <br />
+            <input type="text" id="get_answer_3" placeholder="Question 3"/>
+            <br />
+            <br />
+            <button type="button" id="enter_answer_button"> Enter </button>
+
+        </div>
+    </div>
+
+    <div id="my_third_modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2> Create new password</h2>
+            <input type="password" placeholder="New password" id="new_password" />
+    
+            <br />
+            <input type="password" placeholder="Confirm password" id="confirmation_password" />
+            <br />
+            <label id="warning_1"> </label>
+            <br />
+            <button type="button" id="new_password_button">Enter</button>
+
+        </div>
+    </div>
+
+    <style>
+        #login, #welcome {
+            text-align: center;
+            margin: auto;
+        }
+
+        body {
+            background-color: #88a9c3;
+        }
+
+        #username, #password {
+            padding: 5px;
+            margin: 2px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+
+        #login_button, #create_account_button, #forgot_password_button, #find_button, #enter_answer_button {
+            padding: 5px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+            #login_button:hover, #create_account_button:hover, #forgot_password_button:hover {
+                background-color: lightblue;
+            }
+
+        /* First modal*/
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            background-color: #88a9c3;
+        }
+
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            .close:hover {
+                color: black;
+            }
+
+
+        #find_account_input {
+            padding: 5px;
+            margin: 2px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        .modal-content-edit {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            text-align: center;
+            background-color: #88a9c3;
+        }
+        #answers{
+
+
+
+            color:lightblue;
+            font:bold;  
+            font-size:30px;
+
+
+
+        }
+    </style>
+
+
+    <script src="index.js">
+
+    </script>
+</body>
+</html>

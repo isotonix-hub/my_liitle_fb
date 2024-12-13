@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Input Example</title>
+</head>
+<body>
+
+
+    <div>
+
+        <h1 id="back"> Double click to go back to profile!</h1>
+    </div>
+    <div id="logout">
+ 
+        <button class="hover" type="button" id="personal_information_button"> Personal information</button>
+        <button class="hover" type="button" id="delete_account"> Delete account?</button>
+        <button class="hover" type="button" id="logout_button"> Logout</button>
+       
+
+    </div>
+
+
+    <div id="center_search_friend">
+        <input  type="text" id="search_friend" placeholder="Search friend" /> 
+        <br />
+        <button type="button" id="search_friend_button" >Search </button>
+
+
+    </div>
+
+    <div>
+        <h1 id="facebook"> My little fb</h1>
+    </div>
+
+
+
+    <div id="profile_picture">
+
+        <label for="profile_picture_file">Choose a profile picture</label>
+        <input type='file' id="profile_picture_file" accept="image/*" />
+
+        <br />
+        <button class="hover" type='button' id="enter_profile_picture"> Save </button>
+
+        <button class="hover" type='button' id="delete_profile_picture"> Delete</button>
+        <br />
+
+
+    </div>
+
+
+    <div>
+
+        <h2 id="name"> </h2>
+    </div>
+
+
+
+
+
+
+    <div id="preview_container">
+        <img id="image_preview" src="" alt="Image Preview" style="display:none; ">
+
+    </div>
+
+
+    <br />
+
+
+
+    <div id="function_comment">
+        <input type='text' placeholder="What's in your mind?" id='comment_value' />
+        <button class="hover" type='button' id='comment_enter'>Enter</button>
+    </div>
+
+
+    <div id="container_comment">
+
+        <br />
+    </div>
+
+
+
+    <div id="my_modal_personal_information" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <h1> Personal details</h1>
+
+            <! -- For name -->
+
+            <label class="edit_label">Name:</label>
+
+            <label class="edit_label" id="label_1"> </label>
+
+            <br />
+
+            <input type="text" id="change_name" placeholder="Change name" />
+
+            <br />
+
+
+            <! -- For last name -->
+
+            <label class="edit_label">Last name: </label>
+
+            <label class="edit_label" id="label_2">  </label>
+
+            <br />
+
+            <input type="text" id="change_last_name" placeholder="Change lastname" />
+
+            <br />
+
+
+
+            <! -- For  birthday-->
+
+            <label class="edit_label">Birthday: </label>
+
+            <label class="edit_label" id="label_3"> </label>
+
+            <br />
+
+            <input type="date" id="change_birth_day" placeholder="Change lastname?" />
+
+            <br />
+
+
+            <! -- For  gender-->
+
+            <label class="edit_label">Gender: </label>
+
+            <label class="edit_label" id="label_4"> </label>
+
+            <br />
+
+            <label class="edit_label">Male</label>
+            <input type="radio" name="gender" id="change_male" />
+
+            <label class="edit_label">Female</label>
+            <input type="radio" name="gender" id="change_female" />
+
+            <br />
+
+
+
+
+
+            <! -- For  email-->
+
+            <label class="edit_label">Email or phone number: </label>
+
+            <label class="edit_label" id="label_5"> </label>
+
+            <br />
+
+            <input type="text" id="change_email_or_phone_number" placeholder="Change email or phone number" />
+
+            <br />
+
+
+            <! -- For  password-->
+
+            <label> Change password</label>
+            <br />
+            <input type="password" id="current_password" placeholder="Current password" />
+            <br />
+            <input type="password" id="change_new_password" placeholder="New password" />
+            <br />
+            <input type="password" id="change_confirm_password" placeholder="Confirm password" />
+            <br />
+
+
+
+            <! -- For  button-->
+            <label>Note:(If you change now either one of your details you will wait for 1 month to change again.)  </label>
+            <br />
+            <button type="button" id="change_personal_details_button"> Save</button>
+
+        </div>
+    </div>
+
+
+    <div id="my_modal_delete_account" class="modal">
+        <div class="modal-content">
+            <span id="close_delete"class="close">&times;</span>
+
+            <h2> Deleting account</h2>
+            <h3>Note:If you delete your account, you cannot retrieve it.</h3>
+            <input type="password" id="enter_password" placeholder="Enter password"/>
+            <br />
+            <label id="confirmation_label"> </label>
+            <br />
+            <button type="button" id="deleting_account_button">Delete </button>
+
+
+        </div>  
+    </div>
+
+
+    <script src="user_page.js"></script>
+            
+
+
+    <style>
+        #facebook {
+            text-align: center;
+        }
+
+        #image_preview {
+            border-style: solid;
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        #name {
+            text-align: left;
+        }
+
+        body {
+            background-color: #88a9c3;
+        }
+
+        .hover:hover {
+            background-color: lightblue;
+        }
+
+        #logout {
+            text-align: right;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            background-color: #88a9c3;
+        }
+
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            .close:hover {
+                color: black;
+            }
+
+
+        #center_search_friend{
+            text-align:center;
+
+        }
+
+
+    </style>
+</body>
+</html>
+                    
